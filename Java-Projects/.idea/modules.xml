@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java-8-features/java-8-features.iml" filepath="$PROJECT_DIR$/java-8-features/java-8-features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-basics/java-basics.iml" filepath="$PROJECT_DIR$/java-basics/java-basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-datastructures/java-datastructures.iml" filepath="$PROJECT_DIR$/java-datastructures/java-datastructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-io/java-io.iml" filepath="$PROJECT_DIR$/java-io/java-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-net-demo/java-net-demo.iml" filepath="$PROJECT_DIR$/java-net-demo/java-net-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-threading/java-threading.iml" filepath="$PROJECT_DIR$/java-threading/java-threading.iml" />
+    </modules>
+  </component>
+</project>

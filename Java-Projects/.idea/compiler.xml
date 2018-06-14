@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="java-8-features" />
+        <module name="java-basics" />
+        <module name="java-datastructures" />
+        <module name="java-io" />
+        <module name="java-net-demo" />
+        <module name="java-threading" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="java-8-features" target="1.7" />
+      <module name="java-basics" target="8" />
+      <module name="java-datastructures" target="1.7" />
+      <module name="java-io" target="1.7" />
+      <module name="java-net-demo" target="1.7" />
+      <module name="java-threading" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
