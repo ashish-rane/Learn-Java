@@ -1,7 +1,6 @@
 package com.xpert.java;
 
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Map provides data structure to store key-value pairs.
@@ -89,6 +88,74 @@ public class MapDemo {
         System.out.println("Is Empty " + tm.isEmpty());
     }
 
+
+    /**
+     * WeakHashMap implements weak references where the key value pair is
+     * garbage collected when key is not longer referenced outside the map.
+     */
+    public static void WeakHashMapDemo(){
+        map.put(new String("Maine"), "Augusta");
+
+        Runnable runner = new Runnable() {
+            @Override
+            public void run() {
+                while (map.containsKey("Maine")){
+                    try{
+                        Thread.sleep(500);
+                    }
+                    catch (InterruptedException ex){
+                        ex.printStackTrace();
+                    }
+                    System.out.println("Thread waiting");
+                    System.gc();
+                }
+            }
+        };
+
+        Thread t = new Thread(runner);
+        t.start();
+        System.out.println("Main Waiting");
+        try {
+            t.join();
+        }
+        catch (InterruptedException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    /**
+     * Maintains a linked list of entries in a map.
+     * This preservers teh order of insertion
+     */
+    public static void LinkedHashMapDemo(){
+        LinkedHashMap<String,Double> lhm = new LinkedHashMap<>();
+
+        // Put elements to the map
+        lhm.put("Zara", new Double(3434.34));
+        lhm.put("Mahnaz", new Double(123.22));
+        lhm.put("Ayan", new Double(1378.00));
+        lhm.put("Daisy", new Double(99.22));
+        lhm.put("Qadir", new Double(-19.08));
+
+        System.out.println("To String " + lhm );
+        System.out.println("Size " + lhm.size());
+        System.out.println("Entry Set " + lhm.entrySet());
+        System.out.println("Get Value of Zara " + lhm.get("Zara"));
+        System.out.println("Keys " + lhm.keySet());
+        System.out.println("Values " + lhm.values());
+        System.out.println("Contains Key " + lhm.containsKey("Daisy"));
+        System.out.println("Contains Value " + lhm.containsValue(99.22));
+        lhm.remove("Qadir");
+        System.out.println("After removing Qadir " + lhm);
+        lhm.replace("Mahnaz", 200.00);
+        System.out.println("After setting value of Mahnaz " + lhm);
+
+        lhm.clear();
+        System.out.println("Is Empty " + lhm.isEmpty());
+    }
+
+    private static Map<String, String> map = new WeakHashMap<>();
+
     public static void main(String[] args){
 
         System.out.println("----------- HashMap DEMO -----------");
@@ -96,5 +163,11 @@ public class MapDemo {
 
         System.out.println("----------- TreeMap DEMO -----------");
         TreeMapDemo();
+
+        System.out.println("----------- WeakHashMap DEMO -----------");
+        WeakHashMapDemo();
+
+        System.out.println("----------- LinkedHashMap DEMO -----------");
+        LinkedHashMapDemo();
     }
 }
