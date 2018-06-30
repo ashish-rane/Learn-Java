@@ -19,8 +19,8 @@ public class ThreadingDemo
 
         //ThreadClasses.RunnableDemo();
 
-        ThreadClasses.ThreadDemo();
+        //ThreadClasses.ThreadDemo();
 
-        //SyncDemo();
+        SyncDemo();
     }
 }
